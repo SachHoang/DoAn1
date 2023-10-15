@@ -86,7 +86,6 @@
             this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Bàn Ăn";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -97,7 +96,6 @@
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tên Bàn Ăn";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -108,7 +106,6 @@
             this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Loại Bàn";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -119,7 +116,6 @@
             this.label5.Size = new System.Drawing.Size(118, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Số Lượng Khách";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox3
             // 
@@ -237,7 +233,6 @@
             this.label1.Size = new System.Drawing.Size(208, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Tìm Kiếm Theo Mã Bàn Ăn";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBox2
             // 
@@ -344,7 +339,6 @@
             this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Tình Trạng";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -355,7 +349,6 @@
             this.label7.Size = new System.Drawing.Size(78, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Giá Thành";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Column1
             // 
