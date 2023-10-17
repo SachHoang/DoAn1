@@ -32,12 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvQLTD = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnXoa = new System.Windows.Forms.ToolStripButton();
+            this.btnDong = new System.Windows.Forms.ToolStripButton();
             this.btnTim = new System.Windows.Forms.Button();
             this.txtMaM = new System.Windows.Forms.TextBox();
             this.txtTenM = new System.Windows.Forms.TextBox();
@@ -46,13 +52,7 @@
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.cmbNhom = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnDong = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLTD)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,41 @@
             this.dgvQLTD.RowTemplate.Height = 24;
             this.dgvQLTD.Size = new System.Drawing.Size(1154, 436);
             this.dgvQLTD.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã món";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên món";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 400;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Giá";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Nhóm";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 400;
             // 
             // toolStrip1
             // 
@@ -142,6 +177,15 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(59, 24);
             this.btnXoa.Text = "Xóa";
+            // 
+            // btnDong
+            // 
+            this.btnDong.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(70, 24);
+            this.btnDong.Text = "Đóng";
             // 
             // btnTim
             // 
@@ -209,40 +253,6 @@
             this.cmbNhom.Size = new System.Drawing.Size(170, 24);
             this.cmbNhom.TabIndex = 6;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã món";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên món";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 400;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Giá";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Nhóm";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 400;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -252,15 +262,6 @@
             this.label5.Size = new System.Drawing.Size(119, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Tìm kiếm món ";
-            // 
-            // btnDong
-            // 
-            this.btnDong.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
-            this.btnDong.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(70, 24);
-            this.btnDong.Text = "Đóng";
             // 
             // QLTD
             // 
@@ -282,6 +283,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "QLTD";
             this.Text = "QLTD";
+            this.Load += new System.EventHandler(this.QLTD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLTD)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
