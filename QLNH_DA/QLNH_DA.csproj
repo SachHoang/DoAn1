@@ -114,6 +114,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThu.resx">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giaodien.resx">
       <DependentUpon>Giaodien.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV.resx">
       <DependentUpon>QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTD.resx">
+      <DependentUpon>QLTD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

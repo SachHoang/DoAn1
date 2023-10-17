@@ -121,7 +121,7 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAACHdJREFUWEe1WOtvFNcVX5q26UNV1Q/tl6bql0Zqlaqq1D+gX4rXgAOCeHcNEklE
+        vAAADrwBlbxySQAACHdJREFUWEe1WOtvFNcVX5q26UNV1Q/tl6bql0Zqlaqq1D+gX4rXgAOCeHcNEklE
         FZoSQRVFrSiEXRtSg3nYs65r7y5LjJ+7M7ZTmwSDbR6hTktMSIEUh4cNDkmNgWCHhzE2672n53dnxjsz
         u+s1hB7p6N45c+ee3/2dcx9zXQ8jHo/2xIrqpu8tU5qe9imxAl+FutOnqMdYr/sq4tOsoiioEZeTPiV+
         yVse7+R3pd6KuHtFVeOPV4f3fYu7maf39pjFtzP2I4+ivuwLqq3scJgdJw0wokhRZWkBaLcpaoIB93sV
@@ -654,4 +654,7 @@
         sZ2m5lY6Ojro7hlgUJwwOjbB1Mw0c/ce8FA4+PTp05clBuB/ABs+8ddT5XP2AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>
