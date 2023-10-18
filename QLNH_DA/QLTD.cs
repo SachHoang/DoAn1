@@ -22,19 +22,19 @@ namespace QLNH_DA
         {
 
             Model1 context = new Model1();
-            List<QuanLiThucDon> qltd = context.QuanLiThucDons.ToList();
-            List<QuanLiNhomMonAn> qlnma = context.QuanLiNhomMonAns.ToList();
+            List<ThucDon> qltd = context.ThucDons.ToList();
+            List<NhomMonAn> qlnma = context.NhomMonAns.ToList();
             FillNhomCombobox(qlnma);
             BindGrid(qltd);
 
         }
-        private void FillNhomCombobox(List<QuanLiNhomMonAn> qlnma)
+        private void FillNhomCombobox(List<NhomMonAn> qlnma)
         {
             this.cmbNhom.DataSource = qlnma;
             this.cmbNhom.DisplayMember = "TenNhom";
             this.cmbNhom.ValueMember = "NhomMonAnID";
         }
-        private void BindGrid(List<QuanLiThucDon> qltd)
+        private void BindGrid(List<ThucDon> qltd)
         {
 
             dgvQLTD.Rows.Clear();
@@ -42,10 +42,10 @@ namespace QLNH_DA
             {
                 int index = dgvQLTD.Rows.Add();
 
-                dgvQLTD.Rows[index].Cells[0].Value = item.MonAnID;
+                dgvQLTD.Rows[index].Cells[0].Value = item.ThucDonID;
                 dgvQLTD.Rows[index].Cells[1].Value = item.TenMon;
                 dgvQLTD.Rows[index].Cells[2].Value = item.Gia;
-                dgvQLTD.Rows[index].Cells[3].Value = item.QuanLiNhomMonAn.TenNhom;
+                dgvQLTD.Rows[index].Cells[3].Value = item.NhomMonAn.TenNhomMonAn;
             }
         }
 
@@ -76,14 +76,14 @@ namespace QLNH_DA
                 string nhom = cmbNhom.SelectedValue.ToString();
                 using (var context = new Model1())
                 {
-                    QuanLiThucDon qltd = new QuanLiThucDon();
-                    qltd.MonAnID = maM;
+                    ThucDon qltd = new ThucDon();
+                    qltd.ThucDonID = maM;
                     qltd.TenMon = tenM;
                     qltd.Gia = gia;
                     qltd.NhomMonAnID = nhom;
-                    context.QuanLiThucDons.Add(qltd);
+                    context.ThucDons.Add(qltd);
                     context.SaveChanges();
-                    BindGrid(context.QuanLiThucDons.ToList());
+                    BindGrid(context.ThucDons.ToList());
 
                     MessageBox.Show("Thêm thành công!", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtMaM.Text = "";
@@ -110,7 +110,7 @@ namespace QLNH_DA
                     string nhom = cmbNhom.SelectedValue.ToString();
 
 
-                    QuanLiThucDon qltd = context.QuanLiThucDons.FirstOrDefault(p => p.MonAnID == maM);
+                    ThucDon qltd = context.ThucDons.FirstOrDefault(p => p.ThucDonID == maM);
 
                     if (qltd != null)
                     {
@@ -120,7 +120,7 @@ namespace QLNH_DA
                         qltd.NhomMonAnID = nhom;
                         context.SaveChanges();
 
-                        BindGrid(context.QuanLiThucDons.ToList());
+                        BindGrid(context.ThucDons.ToList());
 
                         MessageBox.Show("Cập nhật thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtMaM.Text = "";
@@ -152,14 +152,14 @@ namespace QLNH_DA
                     int gia = int.Parse(txtGia.Text);
                     string nhom = cmbNhom.SelectedValue.ToString();
 
-                    QuanLiThucDon qltd = context.QuanLiThucDons.FirstOrDefault(s => s.MonAnID == maM);
+                    ThucDon qltd = context.ThucDons.FirstOrDefault(s => s.ThucDonID == maM);
                     DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
 
                     if (result == DialogResult.Yes)
                     {
-                        context.QuanLiThucDons.Remove(qltd);
+                        context.ThucDons.Remove(qltd);
                         context.SaveChanges();
-                        BindGrid(context.QuanLiThucDons.ToList());
+                        BindGrid(context.ThucDons.ToList());
                         MessageBox.Show("Xóa thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         txtMaM.Text = "";
                         txtTenM.Text = "";

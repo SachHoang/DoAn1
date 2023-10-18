@@ -20,19 +20,19 @@ namespace QLNH_DA
         private void DoanhThu_Load(object sender, EventArgs e)
         {
             Model1 context = new Model1();
-            List<QuanLiHoaDon> qlhd = context.QuanLiHoaDons.ToList();
+            List<HoaDon> qlhd = context.HoaDons.ToList();
             loadSql(qlhd);
         }
-        private void loadSql(List<QuanLiHoaDon> qlhd)
+        private void loadSql(List<HoaDon> qlhd)
         {
             dgvQLDT.Rows.Clear();
             foreach (var item in qlhd)
             {
-                var dongia_tru30 = item.ThanhTien * 0.7;
+                var dongia_tru30 = item.TongTien * 0.7;
 
                 int index = dgvQLDT.Rows.Add();
                 dgvQLDT.Rows[index].Cells[1].Value = item.HoaDonID;
-                dgvQLDT.Rows[index].Cells[2].Value = item.ThanhTien;
+                dgvQLDT.Rows[index].Cells[2].Value = item.TongTien;
                 dgvQLDT.Rows[index].Cells[3].Value = dongia_tru30;
 
 
