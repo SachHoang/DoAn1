@@ -95,9 +95,9 @@
             this.toolStripButton1,
             this.toolStripSeparator1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 602);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 606);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1217, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1217, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -106,7 +106,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(92, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(92, 24);
             this.toolStripButton1.Text = "Cập nhật";
             // 
             // toolStripSeparator1
@@ -123,6 +123,7 @@
             this.toolStripButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripButton2.Size = new System.Drawing.Size(70, 24);
             this.toolStripButton2.Text = "Đóng";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // txtDT
             // 

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using QLNH_DA.Model;
 
@@ -203,6 +203,23 @@ namespace QLNH_DA
                         foundResult = true; // Đặt biến bool thành true nếu có kết quả được tìm thấy
                     }
                 }
+            }
+        }
+        private void ShowGiaodien() 
+        {
+            Giaodien gd = new Giaodien();
+            Thread thread = new Thread(new ThreadStart(ShowGiaodien)); 
+            thread.Start();
+            gd.ShowDialog();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn quay lại? ", "THÔNG BÁO ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (DialogResult.Yes == rs)
+            {
+
+                this.Close();
             }
         }
     }

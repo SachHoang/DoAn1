@@ -182,6 +182,7 @@
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(70, 24);
             this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnTim
             // 
