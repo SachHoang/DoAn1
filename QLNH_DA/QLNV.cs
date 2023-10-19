@@ -21,17 +21,26 @@ namespace QLNH_DA
 
 
         private void QLNV_Load(object sender, EventArgs e)
-        {
+        {            
             Model1 context = new Model1();
             List<NhanVien> QLNV = context.NhanViens.ToList();
             BindGrid(QLNV);
         }
         private void BindGrid(List<NhanVien> sv1)
         {
+            
             dgvNV.Rows.Clear();
             foreach (var sv in sv1)
             {
+                for (int i = 0; i < dgvNV.Rows.Count; i++)
+                {
+                    dgvNV.Rows[i].Cells[0].Value = i + 1;
+                }
                 int index = dgvNV.Rows.Add();
+                for (int i = 0; i < dgvNV.Rows.Count; i++)
+                {
+                    dgvNV.Rows[i].Cells[0].Value = i + 1;
+                }
                 dgvNV.Rows[index].Cells[1].Value = sv.NhanVienID;
                 dgvNV.Rows[index].Cells[2].Value = sv.TenNhanVien;
 
@@ -231,5 +240,6 @@ namespace QLNH_DA
                 }
             }
         }
+
     }   
 }

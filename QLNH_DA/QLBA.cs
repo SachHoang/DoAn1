@@ -31,7 +31,15 @@ namespace QLNH_DA
             dgvBA.Rows.Clear();
             foreach (var sv in sv1)
             {
+                for (int i = 0; i < dgvBA.Rows.Count; i++)
+                {
+                    dgvBA.Rows[i].Cells[0].Value = i + 1;
+                }
                 int index = dgvBA.Rows.Add();
+                for (int i = 0; i < dgvBA.Rows.Count; i++)
+                {
+                    dgvBA.Rows[i].Cells[0].Value = i + 1;
+                }
                 dgvBA.Rows[index].Cells[1].Value = sv.BanAnID;
                 dgvBA.Rows[index].Cells[2].Value = sv.TenBan;
 

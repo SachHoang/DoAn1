@@ -29,7 +29,15 @@ namespace QLNH_DA
             dgvKH.Rows.Clear();
             foreach (var sv in sv1)
             {
+                for (int i = 0; i < dgvKH.Rows.Count; i++)
+                {
+                    dgvKH.Rows[i].Cells[0].Value = i + 1;
+                }
                 int index = dgvKH.Rows.Add();
+                for (int i = 0; i < dgvKH.Rows.Count; i++)
+                {
+                    dgvKH.Rows[i].Cells[0].Value = i + 1;
+                }
                 dgvKH.Rows[index].Cells[1].Value = sv.KhachHangID;
                 dgvKH.Rows[index].Cells[2].Value = sv.TenKhachHang;
                 dgvKH.Rows[index].Cells[3].Value = sv.GioiTinh;
