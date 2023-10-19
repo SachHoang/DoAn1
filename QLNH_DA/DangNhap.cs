@@ -42,6 +42,10 @@ namespace QLNH_DA
                 thread.Start(); //Khởi chạy luôngf
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Bạn đã nhập sai Tài Khoản hoặc Mật Khẩu ! Xin hãy nhập lại", "Thông báo", MessageBoxButtons.OK);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
