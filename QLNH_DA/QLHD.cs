@@ -23,5 +23,10 @@ namespace QLNH_DA
             Chitiethoadon ct = new Chitiethoadon();
             ct.ShowDialog();
         }
+
+        private void QLHD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,18 +22,18 @@ namespace QLNH_DA
         private void QLBA_Load(object sender, EventArgs e)
         {
             Model1 context = new Model1();
-            List<QuanLiBanAn> QLBA = context.QuanLiBanAns.ToList();
-            BindGrid( QLBA );
+            List<BanAn> QLBA = context.BanAns.ToList();           
+            BindGrid(QLBA);
         }
 
-        private void BindGrid(List<QuanLiBanAn> sv1)
+        private void BindGrid(List<BanAn> sv1)
         {
             dgvBA.Rows.Clear();
             foreach (var sv in sv1)
             {
                 int index = dgvBA.Rows.Add();
                 dgvBA.Rows[index].Cells[1].Value = sv.BanAnID;
-                dgvBA.Rows[index].Cells[2].Value = sv.TenBanAN;
+                dgvBA.Rows[index].Cells[2].Value = sv.TenBan;
 
                 dgvBA.Rows[index].Cells[3].Value = sv.LoaiBan;
                 dgvBA.Rows[index].Cells[4].Value = sv.SoLuongKhach;
@@ -59,9 +59,10 @@ namespace QLNH_DA
             string tenBA = txtTenBA.Text;
             string loaiBan = cboLoaiBan.SelectedItem?.ToString();
             string soLuongText = txtSoLuong.Text;
+            string tinhtrang = cboTinhTrang.SelectedItem?.ToString();
             string giaText = txtGia.Text;
 
-            if (string.IsNullOrEmpty(maBA) || string.IsNullOrEmpty(tenBA) || string.IsNullOrEmpty(loaiBan) || string.IsNullOrEmpty(soLuongText) || string.IsNullOrEmpty(giaText))
+            if (string.IsNullOrEmpty(maBA) || string.IsNullOrEmpty(tenBA) || string.IsNullOrEmpty(loaiBan) || string.IsNullOrEmpty(tinhtrang) || string.IsNullOrEmpty(soLuongText) || string.IsNullOrEmpty(giaText))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; // Ngăn người dùng thêm dòng trống
@@ -75,20 +76,21 @@ namespace QLNH_DA
             }
 
             // Nếu tất cả điều kiện đều đúng, thêm dòng mới và lưu vào cơ sở dữ liệu
-            dgvBA.Rows.Add(maBA, tenBA, loaiBan, soLuongKhach, gia);
+            dgvBA.Rows.Add(maBA, tenBA, loaiBan, soLuongKhach, tinhtrang , gia);
             using (Model1 context = new Model1())
             {
-                QuanLiBanAn s = new QuanLiBanAn
+                BanAn s = new BanAn
                 {
                     BanAnID = maBA,
-                    TenBanAN = tenBA,
+                    TenBan = tenBA,
                     LoaiBan = loaiBan,
                     SoLuongKhach = soLuongKhach,
+                    TinhTrang = tinhtrang,
                     Gia = gia
                 };
-                context.QuanLiBanAns.Add(s);
+                context.BanAns.Add(s);
                 context.SaveChanges();
-                BindGrid(context.QuanLiBanAns.ToList());
+                BindGrid(context.BanAns.ToList());
             }
         }
 
@@ -101,10 +103,10 @@ namespace QLNH_DA
         {
             using (Model1 context = new Model1())
             {
-                var s = context.QuanLiBanAns.FirstOrDefault(p => p.BanAnID == maso);
+                var s = context.BanAns.FirstOrDefault(p => p.BanAnID == maso);
                 if (s != null)
                 {
-                    context.QuanLiBanAns.Remove(s);
+                    context.BanAns.Remove(s);
                     context.SaveChanges();
                 }
             }
@@ -149,10 +151,10 @@ namespace QLNH_DA
         {
             using (Model1 context = new Model1())
             {
-                var s = context.QuanLiBanAns.FirstOrDefault(p => p.BanAnID == banAnID);
+                var s = context.BanAns.FirstOrDefault(p => p.BanAnID == banAnID);
                 if (s != null)
                 {
-                    s.TenBanAN = tenBanAn;
+                    s.TenBan = tenBanAn;
                     s.LoaiBan = loaiBan;
                     s.SoLuongKhach = soLuongKhach;
                     s.Gia = gia;

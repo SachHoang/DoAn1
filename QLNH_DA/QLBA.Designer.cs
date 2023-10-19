@@ -45,12 +45,6 @@
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvBA = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,6 +53,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGia = new System.Windows.Forms.TextBox();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBA)).BeginInit();
             this.panel2.SuspendLayout();
@@ -216,11 +217,12 @@
             // 
             this.dgvBA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.Column7,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
+            this.Column1,
             this.Column6});
             this.dgvBA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBA.Location = new System.Drawing.Point(0, 0);
@@ -232,48 +234,6 @@
             this.dgvBA.TabIndex = 14;
             this.dgvBA.TabStop = false;
             this.dgvBA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBA_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã Bàn Ăn";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên Bàn Ăn";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 175;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Loại Bàn";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Số Lượng Khách";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 225;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Giá Thành";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // panel2
             // 
@@ -320,6 +280,9 @@
             // cboTinhTrang
             // 
             this.cboTinhTrang.FormattingEnabled = true;
+            this.cboTinhTrang.Items.AddRange(new object[] {
+            "Trống",
+            "Đã Đặt"});
             this.cboTinhTrang.Location = new System.Drawing.Point(528, 87);
             this.cboTinhTrang.Name = "cboTinhTrang";
             this.cboTinhTrang.Size = new System.Drawing.Size(177, 24);
@@ -328,6 +291,7 @@
             // cboLoaiBan
             // 
             this.cboLoaiBan.FormattingEnabled = true;
+            this.cboLoaiBan.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cboLoaiBan.Items.AddRange(new object[] {
             "Thường ",
             "Vip"});
@@ -363,6 +327,55 @@
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(177, 22);
             this.txtGia.TabIndex = 9;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "STT";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã Bàn Ăn";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên Bàn Ăn";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 175;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Loại Bàn";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Số Lượng Khách";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 225;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tình Trạng";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Giá Thành";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // QLBA
             // 
@@ -412,11 +425,12 @@
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.ComboBox cboTinhTrang;
         private System.Windows.Forms.ComboBox cboLoaiBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
