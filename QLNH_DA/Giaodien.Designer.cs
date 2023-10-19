@@ -76,9 +76,9 @@
             this.button8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(0, 646);
+            this.button8.Location = new System.Drawing.Point(0, 639);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(264, 46);
+            this.button8.Size = new System.Drawing.Size(264, 53);
             this.button8.TabIndex = 1;
             this.button8.Text = "Exit";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
