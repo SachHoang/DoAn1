@@ -42,10 +42,11 @@ namespace QLNH_DA
                 }
                 dgvBA.Rows[index].Cells[1].Value = sv.BanAnID;
                 dgvBA.Rows[index].Cells[2].Value = sv.TenBan;
-
+                
                 dgvBA.Rows[index].Cells[3].Value = sv.LoaiBan;
                 dgvBA.Rows[index].Cells[4].Value = sv.SoLuongKhach;
-                dgvBA.Rows[index].Cells[5].Value = sv.Gia;               
+                dgvBA.Rows[index].Cells[5].Value = sv.TinhTrang;
+                dgvBA.Rows[index].Cells[6].Value = sv.Gia;               
 
             }
         }
