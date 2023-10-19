@@ -172,8 +172,7 @@ namespace QLNH_DA
         private bool foundResult = false;
         private void btnTim_Click(object sender, EventArgs e)
         {
-            using(Model1 context = new Model1())
-            {
+           
                 string searchTerm = txtTim.Text.ToLower();
                 foundResult = false; // Đặt lại biến bool khi bạn bắt đầu tìm kiếm
 
@@ -203,7 +202,7 @@ namespace QLNH_DA
                         foundResult = true; // Đặt biến bool thành true nếu có kết quả được tìm thấy
                     }
                 }
-            }
+            
         }
         private void ShowGiaodien() 
         {
