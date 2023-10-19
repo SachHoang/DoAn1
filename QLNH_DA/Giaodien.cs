@@ -16,6 +16,7 @@ namespace QLNH_DA
         public Giaodien()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
         private void ShowLogin() //Viết 1 hàm không trả về giá trị và không đối số thực hiện việc hiển thị form 2
